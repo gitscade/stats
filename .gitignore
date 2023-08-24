@@ -13,3 +13,4 @@
 # folders: model, data, logs
 data/
 images/
+.ipynb_checkpoints/
