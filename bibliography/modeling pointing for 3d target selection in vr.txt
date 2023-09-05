@@ -1,0 +1,42 @@
+Model Pointing for 3D Target Selection in VR
+
+
+abstract
+Virtual Reality allows users to interact similarly to how they do in th ephysical world, such as touching, moving , and pointing at objects. To selct objects at a distance, most VR techniques rely on casting a ray through on or two points located on the user' body, and placing a cursor on that ray. 
+Howeer, previous studies show that such rays do not help users achieve optimal pointin gaccuracy nor correspond to how they would naturally point. We seek to find features, which would best describe natural pointing at distant targets. We collection motion data from seven locations on the hand, arm, and body, while participants point at 27 targets across a cirtual room . We evaluate the features of pointing an danalyse sets of those fo rpredicting pointing targets. Our analysis shows an 87% classification acuracy between the 27 targets 
+
+
+3.2 Feature engineering and selection
+
+pose features
+We selected features based on three ranking methods: correlation,
+mutual information, and χ2-tests, in addition to handpicking features
+based on regression performance
+
+correlation to target and among other body parts.
+χ2-tests
+regression performance
+
+
+index position: only index "position" is used
+hmd: only hmd position is used
+flexion: user tried tied to straighten their arms no matter the depth. we excluded
+horizontal flexion is inclueded by regression preformance
+
+
+motion features
+
+ours did not use acceleration, because we do not have information on absolute start time of target pointing, and instantaneous acceleration is very jerky and cannot be meaned
+
+for velocity, mean velocity for absolute interval cannot be obtained so only instantaneous velocity was obtained.
+
+F1은 당연하게도 1에 가까워야 precision이 높고, recall(반품)은 0에 가까운 좋은 모델.
+motion feature는 매우 낮은 f1 score을 가진다.
+pose feature는 0.866의 나름 좋은 F1을 보여준다.
+
+regression에서는 뭘 해도 24cm급이 일반 linear model과 random forest model의 한계이다.
+lstm쓰면 13.25는 나와야 한다. (근데 대체 어떻게 input을 준거지??)
+
+진심 network model에서는 feature의 중요도나 interaction을 보기 힘들기 때문이라고 말함. 즉 ablation밖에는 방법에 없어 보이는데...? 그런데 이렇게 말하면 딱히 svm이나 random forest에서도 그 부분을 느끼기는 힘들거 같다. 우리의 경우에는 사용할 수 있는 데이터가 한정된 상황을 가정하기 때문에 그 중에서 검증된 feature만을 쓰는 것에 가깝다.
+
+

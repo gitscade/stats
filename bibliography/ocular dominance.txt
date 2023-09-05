@@ -1,0 +1,161 @@
+in this paper, we present two user studies showing that previous cursorless pointing techniques are rather inaccurate as they lack important considerations about users' characteristics that would help in minimizing inaccuracy. We show that pointing accuracy could be significantly improved by acknowledging users' handedness and ocular dominance.
+
+In a first user studym, we reveal the large effect of ocular dominance and handedness on human pointing behavior. Current ray-casting techniques negliect both ocular dominance and handedness as effects onto pointing behavior, precluding them fromj accurate cursorless selection. With a second user study, we show that accounting for ocular dominance and handedness yeilds to significantly more accurate selections compared to two previously published ray-casting techniques. This sepeaks for the importance of considering users' characteristics further to develop better selection techniques to foster more robust accurate selections
+
+
+
+
+pointing gesturs have been a topic in human-computer interaction research for a long time. They are easy to perform and our natural means of referencing objects when communicating with each other and thus particulararly suitable for interactions with distant objects and devices. So far, most research covering distant pointing dealt with cursor-based pointing. Cursors are particularly useful for mediated pointing, where a device translates the indication of users into a cursor position. This is still the current method of choice to interact with personal computers as well as large displays. The main advantatge of cursor-based pointing is that inaccuracies in recognizing the user's pointing intent are largely uncritical as they are automatically compensated for by the user. This compensation takes place as users consciously adjests the cursor so that it matches the position of the objects they intend to select. This is true for indirect poinging, but as well for direct pointing gestures.
+In smart environments, e.g., next-generation factories and officies and especially smart homes, ever more devices are smartified, i.e., radiators, air conditioning, blinds, curtains, and lights beome digitally and remotely controllable, other systems such as hi-fi systems receive network connectivity and APIs that likewise increse their possibilities for remote interaction. However, many of these controllable devices do not offer a display for cursor-based feedback, let alone one that is large enough to be visible from a distance. Physical interaction such as pressing buttons or  by means of touchscreens has and willl be a good alternative, but requires the device to be within physical reach. Remote controls already pile up in users'' homes and require to be in physical reach as well. This leaves cursorless pointing as one of the few promising alternatives for future distant interaction with devices in smart environments. Example sof a desired support for interaction range from simple scenarios to mroe comples ones like changing the source of a hi-fi system or setting the air conditioning to a specific temperature.
+More generally, the types of interaction with smart devices can be broken down into macro and micro selections. By macro selection, in this context, we mean selecting on of the available objects in a room for further interaction Conversely, by micro selections we mean selecting functions of a device such as moving the blinds. Of course, with simjple devices macro selection can be sufficient to directly execute and associated function, for example, turning a light on or off by pointing at ti. Instead of using pointing, macro selection could also be achieved using voice input or through a handheld device; however, this can be cumbersome in case of many oridentical objects in the environment due to the entailed list navigation and disambiguation of identical objects. In contrast, pointing allosw to leverage the environment for direct interaction that should be much quicker and easier to perform. When a device is selected for interaction, micro selections may allow for more fine-grained interactions such as setting a temperature, selecting a type of coddee to prepare for brewing, choosing the position of blinds, and controlling home entertainment systems. These are only a few examples for interactions that might occur in a smart home that require precise distant interaction without a cursor. With currenlty available techniques, non of those are easy to perform. Today, one instead has to use an additional device for interaction with smart devices, such as a remote control, an app on a mobile phon--or one even has to physically approah the device in order to control it.
+
+"direct selection method"
+In this paper, we report on research aiming at improving current cursorless, direct selection methods for smart environments. Our research questions were (1) how ocular dominance and handedness influence the accuracy of existing cursorless, direct selection methods and (2) if a cursorless, direct selection method accounting for the effects ocular dominance and handedness have on pointing behavior would be more accurate than previously presented techniques. Thus, two user studies were conducted. In the first study, 33 participants with normal or corrected to normal vision were instructed to point at 16 different targets. Their motions were recored with motion capturing, providing us with a ground truth of their exact pointing positions. The motion capturing data was then used to compare several raycasting techniques depending on participants' handedness and ocular dominance. Additionally, the motion capturing data we gained from this first study was used to calculate ideal starting points for our proposed ray-casting technique, HRC optimized
+Even with a perfect tracking of hands and gaze, current ray-casting techniques only allow macro selections under strict conditions, while micro selections are currently hadr to achieve. Another limitation of current ray-casting technique is that they imply a certain pointing model that may be counter0intuitive at least for some users and require prior training and mental demand to always follow exactly this model. In our study, even the bset tested previously publised technique, eye-finger ray casting, showed an average offset of 18cm to the target. As the intended direction cannot be known in advance, this enlarges the range of uncertainty to both sides resultsing in a possible offset up to 36cm. Though the reduction of this deviation is topic of ongoing research, previous results are still not accurate enought for micro selections in smart homes. A possible reason for this might be their disregard of ocular dominance and handedness as an influential factor on pointing behavior.
+To answer our second research question, we used the motion capture data to then calculate ideal starting points for our proposed ray-casting technique, HRC optimized. Here ocular dominance as well as handedness is accounted for by using different starting points for indiciduals depending on their handedness and ocular dominance. This leads to an increased pointing accuracy when no cursor is visible. In our second study, conducted to validate the results of the foirst study, participants were instructed to not only point at different targets but also to simultaneously walk to created arbitrary pointing angles. The results confirm the results of the first study. We thus show that by accounting for ocular dominace and handedness, the offset between target and ray casting result can significantly be improved compared to two previously publised ray-casting techniques that depict the state of the art. In particular, we make the following contributions:
+
+- An assessment of the arrucary of serverl ray-casting techniques for cursorless pionting. It shows how pointing behavior is systematicalkly influenced by ocular dominance, for instance leading to 95.5% of our right eyed right-handed participants missing the target from the south-east direction, further showing interesting differences between right and left eyed users and left and right handed users as for instance left handed users tending to position their finger more on th eleft side and right handed users positioning their finger more on the right side of a target. This effect, however, is weakened when the eye oppisite to the dominant hand is the dominant one.
+-HRC optimizedthe new ray-casting technique we propose based on the results of our first study, accounting for ocular dominance and handedness of users and leading to significantly more accurate cursorless distsnt pointing, as a cross validation shows
+-the validation of HRC optimized in a separate study with greater focus on external validity, including arbitrary pointing positions. We show that even insuch an uncontrolled setting, our technique yields to significantly more accurate results without the need to instruct users. Based on these results, we argue that considering users' characteristics like handedness and ocular dominance allows us to develop more accurate ray-casting techniques and to futher improve interactions in smart spaces.
+
+
+
+conclusion
+
+This paper focused on distant cursorless pointing in smart
+environments, where pointing is an input modality for both
+macro and micro selections. Current ray-casting techniques
+only allow for macro selection when smart objects are
+positioned around 40 cm apart when users are 3 m away
+from the objects. Micro selections, which would allow a
+more fine grained interaction by enabling selections of
+specific functions of appliances, are still not possible. We
+thus aimed to examine the effects of ocular dominance
+and handedness on ray-casting techniques and to show
+that by accounting for both characteristics, more accurate
+selections could be possible. In the first study presented
+in this paper, we used motion capturing and simultaneous
+video recordings of user’s sight to learn how the finger is
+aligned with the target and what influence ocular dominance
+and handedness have on the accuracy of ray-casting in a
+cursorless setting. Subsequently, we used the data to find
+the best suited ray-casting technique by means of reverse
+ray casting. The obtained new ray-casting technique, HRC
+optimized, was validated in a second user study in which we
+compared it against two previously published ray-casting
+techniques, namely FRC and EFRC. HRC optimized did not
+only show an overall better experience, but was and can be
+used with uninstructed users. This not only allows it to be
+used right out of the box, but further enables the application
+to user groups that likely have more difficulties to follow a
+certain pointing model, elderly people for instance, all the
+more if it was not their innate one. Notwithstanding, prior
+training may improve the accuracy of HRC optimized as
+well, which we will investigate in the future.
+Overall, we have shown that ocular dominance and
+handedness have a strong influence on how the finger is
+aligned with the target, thus effecting accuracy of raycasting
+techniques. With this knowledge, users’s intentions
+are better interpretable and correction mechanisms can
+be better tailored for users as well as for specific use
+cases. Albeit taking ocular dominance and handedness into
+account leads to more accuracy, HRC optimized is not
+yet accurate enough to allow full micro selections. To
+further explore how micro selection could be possible in
+cursorless settings is part of our future research. Also,
+further evaluation is needed to show if HRC optimized is
+not only suitable for the use by young healthy adults, but
+also in ambient assistive living settings where users are
+mostly senior citizens. Nevertheless, our results contribute
+to the understanding of human pointing, and will serve in
+constructing a model of human pointing behavior needed for
+distant cursorless interaction in the future.
+
+
+===============observations---------------------------------------
+Ocular dominance and handedness
+>direct selection method
+
+1.ocular dominance
+
+
+2. Motor control theory
+>motor control -> hand-eye coordination (Kawato12)
+>motor control theory (9,19)
+>todorowv and jordan(29)
+bowman0gaze shifts in relation to hand movements(5)
+>Rhythmical pointing tasks were subject to
+the work of Lazzari et al. [20]. They state that hand and
+eye movements are dynamically synchronized.
+
+
+3. distant pointing
+Argelaguet
+and Andujar compared the performance of hand- and
+eye-based ray-casting in cluttered virtual environments 
+developing algorithms to increase
+accuracy. Focusing on distant pointing at ultra walls, Nancel
+et al. developed several methods to increase pointing accuracy
+for cursor-based pointing [23], whereby we focus on
+cursorless pointing in smart environments.
+currently
+used pointing metaphors are unlikely to represent human
+pointing behavior
+r. Caon et al. addressed pointing at devices
+in smart environments. Their solution allowed macro
+selection, e.g., turning the devices users point at on or
+off [6]. In contrast to Caon et al., our focus is less on the
+technical implementation of a gesture recognition system
+for macro interaction and more on finding a suitable raycasting
+method for micro selections, allowing for a more
+fine-grained interaction.
+
+4. ray casting
+With ray casting, a ray is cast from the
+user towards the targets and its intersection with potential
+targets is calculated [23]. 
+
+An eye-rooted ray-casting technique
+is cyclops eye [18], where the ray starts from the point
+between the eyes and goes through the tip of the index
+finger (EFRC in this paper).
+
+Jota et al. compared several ray-casting techniques, stating
+that the used technique should be selected depending on
+the task [12]. They also stated the importance of ocular
+dominance for eye-rooted ray casting
+
+
+
+3. study1
+As we have shown, our
+ray-casting technique HRC optimized integrating ocular
+dominance and handedness delivers a theoretical increase
+by 14.6% in pointing accuracy, as Fig. 9 depicts, and
+also significantly less aberrations in x and y direction.
+
+
+4. study2 좀더 실전적으로 study를 진행함
+, it is rather unlikely to always stand 3
+m in front of the smart devices and point from a relaxed
+starting position. Also, the angle towards the target might
+be more extreme. To tackle these issues, we conducted
+a second study with less controlled starting positions and
+angles, and compared the ray-casting technique derived
+from this study (HRC optimized) to the finger and finger-eye
+ray-casting (FRC and EFRC, respectively) techniques.
+
+
+We chose a one-factorial between-subjects design, the
+only factor being the used pointing technique. P
+
+
+
+LIMITATIONS
+Another limitation to our studies is the
+distance towards the target. HRC optimized was developed
+based on pointing at targets at only a 3-m distance. In the
+second study, distances varied from 2.6 m up to 3.8 m and
+overall, HRC optimized still performs well, yielding to up to
+one degree lesser offsets than EFRC. However, we cannot
+fully say how the tested ray-casting techniq
