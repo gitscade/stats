@@ -1,0 +1,35 @@
+
+15 participants (f=4, m=11, age=27.0+-2.1)) participated in data collection for target pointing in a spherical grid setup. 9 more participants (f=7, m=2, age=25.9+-2.9) were recruited for pointing in randomized spatial placement setup.
+
+
+
+The subjects, upon hearing the instantiation beep, has to point at the target in a standing position and point at its center. Subjects were instructed to freely move back to the initial standing position whenever they thought pointing was complete to be ready for recording next pointing sequence for a different target.
+
+
+
+
+
+A. Target Pointing in a Spherical grid setup
+In a spehrical grid setup, we designed our targets to be placed in an equidistant position from the user hmd, for differnt distance values. Four distance values of 0.9m, 1.7m, 2.5m, and 3.3m were tested. For each depth, targets were placed across 9 different angular positions  (4 depth x 9 targets x 4 repetition = 144 trials).
+
+>+-30, +-20, +- 
+
+Target was placed in 3D virtual environment at the onset of instantiation audio beep.
+Order of target placement was randomized during the data collection, and 4 repetitions were collected for each target position. The whole setup and data collection took approximately 30-40 min per subject
+
+
+
+
+
+B. Target pointing in a Randomized Position.
+
+In randomized placement scenario, we placed our targets following a uniform-random distribution pattern. Candidate position for a target exists in a volume spanning distances between 0.9-3.4m, while confined in +-30 degress horizontally, and +- 20degrees vertically.
+
+The collection of data in a randomized placement scenario was to provide data which are not spaced regularly as to induce overfitting to spefiic position while training our model for target angle prediction. This is expected to provide some form of robustness to the final trained model, in response to inputs data not relatable to training data.
+
+
+
+
+
+
+
