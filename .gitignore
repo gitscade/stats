@@ -12,6 +12,7 @@
 >>>>>>> f9b713af94210d2047851d0274adc0980480fc9d
 # folders: model, data, logs
 data/
+results_grid/
 images/
 .ipynb_checkpoints/
 old/
